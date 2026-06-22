@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PM Weekly Product Pulse — Claude Code Skill</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f4f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 16px 80px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      max-width: 640px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ff6900 0%, #ffb347 100%);
+      padding: 40px 40px 32px;
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .body {
+      padding: 36px 40px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .features li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .features li:last-child { border-bottom: none; }
+
+    .icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .step-num {
+      background: #ff6900;
+      color: #fff;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-body { flex: 1; }
+
+    .step-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .code-block {
+      background: #1a1a1a;
+      color: #e8e8e8;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .code-block:hover { background: #222; }
+
+    .copy-hint {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 11px;
+      color: #888;
+      font-family: -apple-system, sans-serif;
+      pointer-events: none;
+    }
+
+    .copied .copy-hint { color: #4caf50; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 28px 0;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    .footer a { color: #ff6900; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    .tip {
+      background: #fff8f3;
+      border-left: 3px solid #ff6900;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="badge">Claude Code Skill</div>
+      <h1>PM Weekly Product Pulse</h1>
+      <p>Weekly Slack intelligence for Product Managers — top questions, pain points, feature requests, and sentiment delivered as a Canvas.</p>
+    </div>
+
+    <div class="body">
+      <h2>What it does</h2>
+      <ul class="features">
+        <li><span class="icon">🔍</span><span>Scans public channels + your DMs for the past 30 days, anchored to your product</span></li>
+        <li><span class="icon">📊</span><span>Clusters findings into top questions, pain points, and feature requests</span></li>
+        <li><span class="icon">💬</span><span>Surfaces cross-product friction and domain-level discussions</span></li>
+        <li><span class="icon">📋</span><span>Posts a structured Canvas to a Slack channel of your choice</span></li>
+        <li><span class="icon">🧠</span><span>Learns your preferences over time — tell it what to exclude or reclassify</span></li>
+      </ul>
+
+      <h2>Install in 2 steps</h2>
+      <ol class="steps">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Add the marketplace and install</strong>
+            <p>In Claude Code, run these two commands:</p>
+            <div class="code-block" onclick="copyCode(this, '/plugin marketplace add https://raw.githubusercontent.com/SavannahforMollie/pm-weekly-product-pulse/main/.claude-plugin/marketplace.json')">
+              /plugin marketplace add https://raw.githubusercontent.com/SavannahforMollie/pm-weekly-product-pulse/main/.claude-plugin/marketplace.json
+              <span class="copy-hint">click to copy</span>
+            </div>
+            <br/>
+            <div class="code-block" onclick="copyCode(this, '/plugin install pm-weekly-product-pulse')">
+              /plugin install pm-weekly-product-pulse
+              <span class="copy-hint">click to copy</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Connect Slack</strong>
+            <p>The skill reads your Slack messages, so Claude Code needs access:</p>
+            <div class="code-block" onclick="copyCode(this, '/plugin install slack')">
+              /plugin install slack
+              <span class="copy-hint">click to copy</span>
+            </div>
+            <div class="tip">Select <strong>user scope</strong> and complete the OAuth flow. Your own Slack permissions apply — you can only access channels you already have access to.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Run it</h2>
+      <p style="font-size:14px; color:#555; margin-bottom:12px;">Trigger it by saying something like <em>"weekly product pulse for Resell Pricing"</em>, or use the slash command:</p>
+      <div class="code-block" onclick="copyCode(this, '/pm-weekly-product-pulse:pm-weekly-product-pulse Resell Pricing post in #your-channel')">
+        /pm-weekly-product-pulse:pm-weekly-product-pulse Resell Pricing post in #your-channel
+        <span class="copy-hint">click to copy</span>
+      </div>
+      <div class="tip" style="margin-top:12px;">First run will ask you to set defaults (product, channel). After that it remembers your preferences.</div>
+
+      <hr class="divider" />
+
+      <p class="footer">
+        Problems? Post in <strong>#helpme-ai</strong> &nbsp;·&nbsp;
+        <a href="https://github.com/SavannahforMollie/pm-weekly-product-pulse" target="_blank">View on GitHub</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function copyCode(el, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        el.classList.add('copied');
+        el.querySelector('.copy-hint').textContent = 'copied!';
+        setTimeout(() => {
+          el.classList.remove('copied');
+          el.querySelector('.copy-hint').textContent = 'click to copy';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
