@@ -1,0 +1,8 @@
+{
+  "name": "pm-weekly-product-pulse",
+  "displayName": "PM Weekly Product Pulse",
+  "description": "Weekly Slack intelligence report for Product Managers. Scans public channels and DMs over the past 30 days, anchored to a specific product, and delivers a structured Canvas covering top questions, feedback, pain points, and overall sentiment.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["slack", "product-management", "weekly-report", "intelligence", "canvas"]
+}

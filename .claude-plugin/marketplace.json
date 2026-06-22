@@ -1,0 +1,20 @@
+{
+  "name": "pm-weekly-product-pulse",
+  "description": "PM tools for Slack intelligence reporting",
+  "owner": {
+    "name": "Savannah van Lit"
+  },
+  "plugins": [
+    {
+      "name": "pm-weekly-product-pulse",
+      "displayName": "PM Weekly Product Pulse",
+      "source": {
+        "source": "github",
+        "repo": "SavannahforMollie/pm-weekly-product-pulse",
+        "ref": "main"
+      },
+      "description": "Weekly Slack intelligence report for PMs — top questions, pain points, requests, and sentiment as a Slack Canvas.",
+      "keywords": ["slack", "product-management", "weekly-report"]
+    }
+  ]
+}
