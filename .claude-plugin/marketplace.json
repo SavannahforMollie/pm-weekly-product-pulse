@@ -13,7 +13,7 @@
         "repo": "SavannahforMollie/pm-weekly-product-pulse",
         "ref": "main"
       },
-      "description": "Weekly Slack intelligence report for PMs — top questions, pain points, requests, and sentiment as a Slack Canvas.",
+      "description": "Your weekly Slack intelligence report, delivered as a Canvas. Scans public channels and DMs over the past 30 days, anchored to a product you own, and posts a focused Canvas to any channel: top questions, pain points, and overall sentiment.\n\nSet it once, get reminded automatically. First-run setup saves your product and channel as defaults, then installs a native macOS notification on a schedule of your choice. When it fires, open Claude Code and run /pm-weekly-product-pulse — your settings are applied automatically.\n\nGets smarter every run. After each report, give feedback in plain language: \"this isn't relevant\", \"wrong classification\", \"don't include this next time\". The skill saves your preferences and applies them silently on every future run.",
       "keywords": ["slack", "product-management", "weekly-report"]
     }
   ]
